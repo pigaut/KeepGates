@@ -1,5 +1,5 @@
-# LangNotFoundException: No message found for language 'en' with id 'placed-generator'. Please fix your language file.
-# If you get an error in console like the one above, it just means the message: 'placed-generator' is not set in en.yml
+# LangNotFoundException: No message found for language 'en' with id 'placed-gate'. Please fix your language file.
+# If you get an error in console like the one above, it just means the message: 'placed-gate' is not set in en.yml
 # This might happen if you update the plugin and new messages where added, or if you modified this file.
 
 # Common Parameters (parameters can be used as placeholders)
@@ -33,22 +33,22 @@ help-footer: '&2---------------------------------------------'
 reload-command: reload
 reload-permission: orestack.reload
 reload-description: 'Reload configuration and data'
-reloading: '&aReloading Orestack plugin... &c(Wait)'
+reloading: '&aReloading KeepGate plugin... &c(Wait)'
 reload-complete: '&aReload completed successfully'
 
 # Item Command
 item-command: item
-item-permission: orestack.item
+item-permission: keepgate.item
 ## Parameters
 file-path-parameter: file-path
 item-name-parameter: item-name
 ## Add Item
 add-item-command: add
-add-item-permission: orestack.item.add
+add-item-permission: keepgate.item.add
 add-item-description: 'Save the item you''re holding to a yaml file'
 ## Remove Item
 get-item-command: get
-get-item-permission: orestack.item.get
+get-item-permission: keepgate.item.get
 get-item-description: 'Get an item saved in a yaml file'
 ## Errors
 file-not-found: '&4Could not find file at path: %file-path%'
@@ -61,16 +61,16 @@ received-item: '&aYou received x1 %item-name% item'
 
 # Message
 message-command: message
-message-permission: orestack.message
+message-permission: keepgate.message
 ## Parameters
 message-name-parameter: message-name
 ## Send message
 send-message-command: send
-send-message-permission: orestack.message.send
+send-message-permission: keepgate.message.send
 send-message-description: 'Send a message to the target player'
 ## Broadcast message
 broadcast-message-command: broadcast
-broadcast-message-permission: orestack.message.broadcast
+broadcast-message-permission: keepgate.message.broadcast
 broadcast-message-description: 'Send a message to all online players'
 ## Success
 sent-message-to-player: '&aMessage sent successfully to %online-player%'
@@ -80,16 +80,16 @@ message-not-found: '&4Could not find a message with name: %message-name%'
 
 # Sound
 sound-command: sound
-sound-permission: orestack.sound
+sound-permission: keepgate.sound
 ## Parameters
 sound-name-parameter: sound-name
 ## Play sound
 play-sound-command: play
-play-sound-permission: orestack.sound.play
+play-sound-permission: keepgate.sound.play
 play-sound-description: 'Plays a sound at the specified location'
 ## Play sound to
 play-sound-to-command: play-to
-play-sound-to-permission: orestack.sound.play-to
+play-sound-to-permission: keepgate.sound.play-to
 play-sound-to-description: "Plays a sound at the target player's location"
 ## Success
 played-sound: '&aPlayed sound successfully at %world-name%, %x%, %y%, %z%'
@@ -99,20 +99,20 @@ sound-not-found: '&4Could not find a sound with name: %sound-name%'
 
 # Particle
 particle-command: particle
-particle-permission: orestack.particle
+particle-permission: keepgate.particle
 ## Parameters
 particle-name-parameter: particle-name
 ## Spawn particle
 spawn-particle-command: spawn
-spawn-particle-permission: orestack.particle.spawn
+spawn-particle-permission: keepgate.particle.spawn
 spawn-particle-description: 'Spawn a particle at the specified location'
 ## Spawn particle to player
 spawn-particle-to-command: spawn-to
-spawn-particle-to-permission: orestack.particle.spawn-to
+spawn-particle-to-permission: keepgate.particle.spawn-to
 spawn-particle-to-description: 'Spawns a particle on the target player'
 ## Show me particle
 show-me-particle-command: show-me
-show-me-particle-permission: orestack.particle.show-me
+show-me-particle-permission: keepgate.particle.show-me
 show-me-particle-description: 'Spawns a particle 2 blocks in front of you'
 ## Errors
 particle-not-found: '&4Could not find a particle with name: %particle-name%'
@@ -123,16 +123,16 @@ showed-me-particle: '&aParticle spawned two blocks in front of you'
 
 # Structure Command
 structure-command: structure
-structure-permission: orestack.structure
+structure-permission: keepgate.structure
 ## Parameters
 structure-name-parameter: structure-name
 ## Save Structure
 save-structure-command: save
-save-structure-permission: orestack.structure.save
+save-structure-permission: keepgate.structure.save
 save-structure-description: 'Saves the selected region to a structure file'
 ## Place Structure
 place-structure-command: place
-place-structure-permission: orestack.structure.place
+place-structure-permission: keepgate.structure.place
 place-structure-description: 'Places the structure at the target block'
 ## Success
 saved-structure: '&aSaving structure to file: %file-path%'
@@ -141,69 +141,65 @@ placed-structure: '&aPlaced structure at target block'
 structure-not-found: '&4Could not find structure with name: %structure-name%'
 structure-minimum-blocks: '&4Structure must have at least two blocks in it'
 
-# Generator Command
-generator-command: generator
-generator-permission: orestack.generator
+# Gate Command
+gate-command: gate
+gate-permission: keepgate.gate
 ## Parameters
-generator-name-parameter: generator-name
+gate-name-parameter: gate-name
 ## Get Generator
-get-generator-command: get
-get-generator-permission: orestack.generator.get
-get-generator-description: 'Get an item used to place/break generators'
+get-gate-command: get
+get-gate-permission: keepgate.gate.get
+get-gate-description: 'Get an item used to place/break gates'
 ## Set Generator
-set-generator-command: set
-set-generator-permission: orestack.generator.set
-set-generator-description: 'Set the generator to the block you''re looking at'
+set-gate-command: set
+set-gate-permission: keepgate.gate.set
+set-gate-description: 'Set the gate to the block you''re looking at'
 ## Remove Generator
-remove-generator-command: remove
-remove-generator-permission: orestack.generator.remove
-remove-generator-description: 'Remove the generator at the block you''re looking at'
+remove-gate-command: remove
+remove-gate-permission: keepgate.gate.remove
+remove-gate-description: 'Remove the gate at the block you''re looking at'
 ## Get All Generators
-get-all-generators-command: get-all
-get-all-generators-permission: orestack.generator.get-all
-get-all-generators-description: 'Adds all generator items to your inventory'
+get-all-gates-command: get-all
+get-all-gates-permission: keepgate.gate.get-all
+get-all-gates-description: 'Adds all gate items to your inventory'
 ## Set All Generators
-set-all-generators-command: set-all
-set-all-generators-permission: orestack.generator.set-all
-set-all-generators-description: 'Sets all generators in the selected region'
+set-all-gates-command: set-all
+set-all-gates-permission: keepgate.gate.set-all
+set-all-gates-description: 'Sets all gates in the selected region'
 ## Remove All Generators
-remove-all-generators-command: remove-all
-remove-all-generators-permission: orestack.generator.remove-all
-remove-all-generators-description: 'Removes all generators in a the selected region'
-## Harvest All Generators
-harvest-all-generators-command: harvest-all
-harvest-all-generators-permission: orestack.generator.harvest-all
-harvest-all-generators-description: 'Harvests all generators with the tool in main hand'
+remove-all-gates-command: remove-all
+remove-all-gates-permission: keepgate.gate.remove-all
+remove-all-gates-description: 'Removes all gates in a the selected region'
 ## Errors
-generator-not-found: '&4Could not find generator with given name'
-incomplete-region: '&4You need to select a region with the generator wand'
+gate-not-found: '&4Could not find gate with given name'
+incomplete-region: '&4You need to select a region with the gate wand'
 too-far-away: '&4Cannot find a block in range, move closer'
-target-not-generator: '&4The block you''re looking at is not a generator'
-generator-overlap: '&4Too close to another generator'
+target-not-gate: '&4The block you''re looking at is not a gate'
+gate-overlap: '&4Too close to another gate'
 ## Success
-received-generator: '&aYou received x1 %generator% generator'
+received-gate: '&aYou received x1 %gate% gate'
 received-wand: '&aYou received x1 wand item'
-created-generator: '&aGenerator created successfully at target block'
-removed generator: '&aGenerator removed successfully at target block'
-received-all-generators: '&aYou received x1 of each generator item'
-created-all-generators: '&aAll generators inside of region have been set successfully'
-removed-all-generators: '&aAll generators inside of region have been removed successfully'
-harvested-all-generators: '&aAll %generator% generators have been harvested with held tool'
+created-gate: '&aGenerator created successfully at target block'
+removed gate: '&aGenerator removed successfully at target block'
+received-all-gates: '&aYou received x1 of each gate item'
+created-all-gates: '&aAll gates inside of region have been set successfully'
+removed-all-gates: '&aAll gates inside of region have been removed successfully'
+harvested-all-gates: '&aAll %gate% gates have been harvested with held tool'
 
-# Generator Item
-generator-place-permission: orestack.generator.place
-generator-break-permission: orestack.generator.break
-generator-rotate-permission: orestack.generator.rotate
-placed-generator: '&aPlaced generator successfully'
-broke-generator: '&cBroke generator successfully'
-changed-generator-rotation: '&aRotated generator by 90 degrees'
-missing-place-permission: '&4You don''t have the permission to place generators'
-missing-break-permission: '&4You don''t have the permission to break generators'
-missing-rotate-permission: '&4You don''t have the permission to rotate generators'
+# Gate Item
+gate-place-permission: keepgate.gate.place
+gate-break-permission: keepgate.gate.break
+gate-rotate-permission: keepgate.gate.rotate
+placed-gate: '&aPlaced gate successfully'
+broke-gate: '&cBroke gate successfully'
+changed-gate-rotation: '&aRotated gate by 90 degrees'
+missing-place-permission: '&4You don''t have the permission to place gates'
+missing-break-permission: '&4You don''t have the permission to break gates'
+missing-rotate-permission: '&4You don''t have the permission to rotate gates'
 
 # Wand Command
 wand-command: wand
-wand-permission: orestack.generator.wand
+wand-permission: keepgate.gate.wand
 wand-description: 'Get a wand used to mark regions'
 
 # Wand Item

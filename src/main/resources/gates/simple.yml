@@ -1,0 +1,19 @@
+--- # Closed Stage
+structure: simple_closed
+delay: 20
+on-click:
+  click: right_click_block
+  do: openGate
+
+--- # Transition Stage (opening/closing)
+structure: simple_transition
+delay: 20
+
+--- # Opened Stage
+structure: simple_opened
+delay: 20
+on-click:
+  click: right_click_block
+  do: closeGate
+
+

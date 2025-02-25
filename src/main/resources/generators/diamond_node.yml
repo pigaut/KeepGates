@@ -1,9 +1,0 @@
---- # Stage 0
-state: depleted
-block: cobblestone
-growth: 60
-
---- # Stage 1
-state: replenished
-structure: diamond_node
-

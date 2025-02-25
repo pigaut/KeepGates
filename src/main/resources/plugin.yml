@@ -1,6 +1,6 @@
-main: io.github.pigaut.orestack.OrestackPlugin
-name: Orestack
-version: 3.25.0
+main: io.github.pigaut.keepgate.KeepGatePlugin
+name: KeepGate
+version: 1.0.0
 api-version: 1.16
 author: pigaut
 description: Create RPG gathering zones in your protected regions

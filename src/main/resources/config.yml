@@ -19,7 +19,7 @@ structure-save-blacklist:
 # Tools are only intended for admin use
 generator-tool:
   material: paper   # Replaced by the last stage block
-  name: '&b&l%generator_tc% Generator (%generator_rotation_tc%)'
+  name: '&b&l%gate_tc% Gate (%gate_rotation_tc%)'
   glow: true
   lore:
     - '&fright-click to place'
@@ -27,8 +27,8 @@ generator-tool:
     - '&fshift + left-click (air) to rotate'
 
 wand-tool:
-  material: golden pickaxe
-  name: '&6&lGenerator Wand'
+  material: golden shovel
+  name: '&6&lGate Wand'
   glow: true
   lore:
     - '&fleft-click to select first corner'
