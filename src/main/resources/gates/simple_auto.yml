@@ -13,8 +13,8 @@ delay: 20
 structure: simple_opened
 delay: 20
 
-on-click:
-  action: right_click
+on-transition:
+  delay: 100
   do: closeGate
 
 

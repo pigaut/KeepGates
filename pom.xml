@@ -4,9 +4,9 @@
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
 
-    <groupId>io.github.pigaut.keepgate</groupId>
-    <artifactId>KeepGate</artifactId>
-    <version>1.0.0</version>
+    <groupId>io.github.pigaut.castlegate</groupId>
+    <artifactId>CastleGate</artifactId>
+    <version>2.0.0</version>
 
     <build>
         <plugins>
@@ -25,16 +25,10 @@
                             <relocations>
                                 <relocation>
                                     <pattern>io.github.pigaut.voxel</pattern>
-                                    <shadedPattern>io.github.pigaut.keepgate.voxel</shadedPattern>
-                                </relocation>
-                                <relocation>
-                                    <pattern>io.github.pigaut.sql</pattern>
-                                    <shadedPattern>io.github.pigaut.keepgate.sql</shadedPattern>
+                                    <shadedPattern>io.github.pigaut.castlegate.voxel</shadedPattern>
                                 </relocation>
                             </relocations>
-                            <shadedArtifactAttached>true</shadedArtifactAttached>
-                            <outputDirectory>D:\files\Development\java\spigot\servers\1.21.4\plugins</outputDirectory>
-                            <finalName>KeepGate-${project.version}</finalName>
+                            <outputFile>D:\files\Development\java\spigot\servers\1.16.5\plugins\CastleGate-${project.version}.jar</outputFile>
                         </configuration>
                     </execution>
                 </executions>
@@ -70,25 +64,25 @@
         <dependency>
             <groupId>io.github.pigaut.yaml</groupId>
             <artifactId>YamlConfig</artifactId>
-            <version>3.4.3</version>
+            <version>3.4.7</version>
             <scope>provided</scope>
         </dependency>
         <dependency>
             <groupId>io.github.pigaut.yaml</groupId>
             <artifactId>SpigotYamlConfig</artifactId>
-            <version>3.4.1</version>
+            <version>3.4.6</version>
+            <scope>provided</scope>
+        </dependency>
+        <dependency>
+            <groupId>io.github.pigaut.sql</groupId>
+            <artifactId>SQLib</artifactId>
+            <version>1.4.1</version>
             <scope>provided</scope>
         </dependency>
         <dependency>
             <groupId>io.github.pigaut.voxel</groupId>
             <artifactId>VoxelSpigot</artifactId>
-            <version>1.4.0</version>
-            <scope>compile</scope>
-        </dependency>
-        <dependency>
-            <groupId>io.github.pigaut.sql</groupId>
-            <artifactId>SQLib</artifactId>
-            <version>1.3</version>
+            <version>1.4.1</version>
             <scope>compile</scope>
         </dependency>
     </dependencies>

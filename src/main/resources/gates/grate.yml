@@ -2,7 +2,7 @@
 structure: grate_closed
 delay: 20
 on-click:
-  click: right_click_block
+  action: right_click
   do: openGate
 
 --- # Transition Stage 1 (opening/closing)
@@ -17,5 +17,5 @@ delay: 20
 structure: grate_opened
 delay: 20
 on-click:
-  click: right_click_block
+  action: right_click
   do: closeGate

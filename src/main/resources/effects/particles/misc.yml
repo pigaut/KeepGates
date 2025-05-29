@@ -1,0 +1,38 @@
+simple_particle:
+  particle: crit                 # The particle type
+  count: 1                       # The number of particles
+  offset: { x: 0, y: 0, z: 0 }   # The exact offset where the particle will spawn
+  delay: 10                       # The delay after which this particle should spawn
+  repetitions: 20                # The amount of times this particle should spawn
+  interval: 5                    # The interval between each repetition, repetitions must be set for this to work
+  range: { x: 1, y: 1, z: 1 }    # The random range in which it will spawn
+  force: false         # Works only if player-only is false, increases the view distance
+  player-only: false   # Whether visible to all or just target player, default is false
+
+explosion: { particle: EXPLOSION_LARGE, count: 3 }
+
+rain_cloud:
+  - { particle: cloud, count: 15, offset.y: 1.5, range: { x: 0.3, z: 0.3 }, repetitions: 8, interval: 2 }
+  - { particle: falling_water, count: 15, offset.y: 1.5, range: { x: 0.2, z: 0.2 }, repetitions: 12, interval: 2 }
+
+magic_circle:
+  - { particle: enchantment_table, count: 3, offset: {x: 1.0, y: 0.0, z: 0.0} }
+  - { particle: enchantment_table, count: 3, offset: {x: 0.707, y: 0.0, z: 0.707}, delay: 3 }
+  - { particle: enchantment_table, count: 3, offset: {x: 0.0, y: 0.0, z: 1.0}, delay: 6 }
+  - { particle: enchantment_table, count: 3, offset: {x: -0.707, y: 0.0, z: 0.707}, delay: 9 }
+  - { particle: enchantment_table, count: 3, offset: {x: -1.0, y: 0.0, z: 0.0}, delay: 12 }
+  - { particle: enchantment_table, count: 3, offset: {x: -0.707, y: 0.0, z: -0.707}, delay: 15 }
+  - { particle: enchantment_table, count: 3, offset: {x: 0.0, y: 0.0, z: -1.0}, delay: 18 }
+  - { particle: enchantment_table, count: 3, offset: {x: 0.707, y: 0.0, z: -0.707}, delay: 21 }
+
+# 1.17+
+#ice_crystals:
+#  - { particle: snowflake, count: 10, offset: {x: 0.1, y: 0.3, z: 0.1} }
+#  - { particle: snow_shovel, count: 8, offset: {x: 0.2, y: 0.5, z: 0.2}, delay: 3 }
+#  - { particle: snowflake, count: 10, offset: {x: 0.3, y: 0.7, z: 0.3}, delay: 6 }
+
+lava_burst:
+  - { particle: flame, count: 10, offset: {x: 0, y: 0.2, z: 0} }
+  - { particle: lava, count: 5, offset: {x: 0.3, y: 0.4, z: 0.3}, delay: 2 }
+  - { particle: lava, count: 5, offset: {x: -0.3, y: 0.4, z: -0.3}, delay: 4 }
+  - { particle: smoke, count: 8, offset: {x: 0.2, y: 0.6, z: 0.2}, delay: 6 }

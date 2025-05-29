@@ -1,9 +1,9 @@
-main: io.github.pigaut.keepgate.KeepGatePlugin
-name: KeepGate
-version: 1.0.0
+main: io.github.pigaut.castlegate.GatePlugin
+name: CastleGate
+version: 2.0.0
 api-version: 1.16
 author: pigaut
-description: Create RPG gathering zones in your protected regions
+description: Create MMO gates in your world
 softdepend:
   - Vault
   - PlaceholderAPI
@@ -13,7 +13,8 @@ libraries:
   - com.h2database:h2:2.3.232
   - com.zaxxer:HikariCP:5.1.0
   - org.snakeyaml:snakeyaml-engine:2.9
-  - io.github.pigaut.yaml:YamlConfig:3.4.3
-  - io.github.pigaut.yaml:SpigotYamlConfig:3.4.1
-  - com.github.cryptomorin:XSeries:13.0.0
+  - io.github.pigaut.sql:SQLib:1.4.1
+  - io.github.pigaut.yaml:YamlConfig:3.4.8
+  - io.github.pigaut.yaml:SpigotYamlConfig:3.4.6
+  - com.github.cryptomorin:XSeries:13.2.0
 

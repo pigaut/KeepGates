@@ -1,214 +1,175 @@
-# LangNotFoundException: No message found for language 'en' with id 'placed-gate'. Please fix your language file.
-# If you get an error in console like the one above, it just means the message: 'placed-gate' is not set in en.yml
-# This might happen if you update the plugin and new messages where added, or if you modified this file.
+# --------------------------
+#    Command Placeholders
+# --------------------------
+# {command}
+# {command_name}
+# {command_description}
+# {command_permission}
 
-# Common Parameters (parameters can be used as placeholders)
-online-player-parameter: online-player   # i.e. %online-player% (if you change this value the placeholder changes too)
-world-name-parameter: world-name
-x-coordinate-parameter: x
-y-coordinate-parameter: y
-z-coordinate-parameter: z
-
-# Common Errors
-usage: '/%command% help'
+# ----------------------------
+#    Generic Command Errors
+# ----------------------------
+## Placeholders: {online-player}, {world-name}, {x}, {y}, {z}
+usage: '/{command_name} help'
 not-enough-args: "&4Not enough arguments"
 too-many-args: '&4Too many arguments'
 no-permission: '&4You don''t have the permission to run this command'
 player-only: '&4This command cannot be executed from console'
-player-not-online: '&4Could not find online player with name: %online-player%'
+player-not-online: '&4Could not find online player with name: {online-player}'
 loading-player-data: '&4Player data is still loading try again later'
-world-not-found: '&4Could not find a world with name: %world-name%'
-expected-coordinates: '&4Expected coordinates but received: x: %x%, y: %y%, z: %z%'
+world-not-found: '&4Could not find a world with name: {world-name}'
+expected-coordinates: '&4Expected coordinates but received: x: {x}, y: {y}, z: {z}'
 
-# Help Command
-help-command: help
-help-permission: orestack.help
-help-description: 'View a list of all available commands'
-# Message
-help-header: '&2------------     &r&l%command% Help     &2------------'
-help-line: '&a/%full_command%: &r%description%'
+# ------------------
+#    Help Command
+# ------------------
+## Description
+help-command: 'View a list of all available commands'
+## Style
+help-header: '&2------------     &r&l{command_name_tc} Help     &2------------'
+help-line: '&a/{command}: &r{command_description}'
 help-footer: '&2---------------------------------------------'
 
-# Reload Command
-reload-command: reload
-reload-permission: orestack.reload
-reload-description: 'Reload configuration and data'
-reloading: '&aReloading KeepGate plugin... &c(Wait)'
+# --------------------
+#    Reload Command
+# --------------------
+## Description
+reload-command: 'Reload configuration and data'
+## Errors
+already-reloading: '&4The plugin is already reloading, please wait'
+## Success
+reloading: '&aReloading Orestack plugin... &c(Wait)'
 reload-complete: '&aReload completed successfully'
 
-# Item Command
-item-command: item
-item-permission: keepgate.item
-## Parameters
-file-path-parameter: file-path
-item-name-parameter: item-name
-## Add Item
-add-item-command: add
-add-item-permission: keepgate.item.add
-add-item-description: 'Save the item you''re holding to a yaml file'
-## Remove Item
-get-item-command: get
-get-item-permission: keepgate.item.get
-get-item-description: 'Get an item saved in a yaml file'
+# -------------------
+#    Item Commands
+# -------------------
+## Placeholders: {item-name}, {item-group}
+## Descriptions
+item-command: ''
+item-add-command: 'Save the item you''re holding to a yaml file'
+item-get-command: 'Get the item with the given name'
+item-get-group-command: 'Get all items of a group'
 ## Errors
-file-not-found: '&4Could not find file at path: %file-path%'
-not-yaml-file: '&4The file must be a yaml file'
+file-not-found: '&4Could not find file at path: {file-path}'
+not-yaml-file: '&4The file is not a yaml file'
 not-holding-item: '&4You need to hold an item to use this command'
-item-not-found: '&4Could not find an item with name: %item-name%'
+item-not-found: '&4Could not find an item with name: {item-name}'
+item-group-not-found: '&4Could not find an item group with name: {item-group}'
 ## Success
-adding-item: '&aAdding %item-name% item to "%file-path%" file...'
-received-item: '&aYou received x1 %item-name% item'
+adding-item: '&aAdding {item-name} item to "{file-path}" file...'
+received-item: '&aYou received x1 {item-name} item'
+received-item-group: '&aYou received all {item-group} items'
 
-# Message
-message-command: message
-message-permission: keepgate.message
-## Parameters
-message-name-parameter: message-name
-## Send message
-send-message-command: send
-send-message-permission: keepgate.message.send
-send-message-description: 'Send a message to the target player'
-## Broadcast message
-broadcast-message-command: broadcast
-broadcast-message-permission: keepgate.message.broadcast
-broadcast-message-description: 'Send a message to all online players'
+# ----------------------
+#    Message Commands
+# ----------------------
+## Placeholders: {message-name}, {online-player}
+## Descriptions
+message-command: ''
+message-send-command: 'Send a message to the target player'
+message-broadcast-command: 'Send a message to all online players'
+## Errors
+message-not-found: '&4Could not find a message with name: {message-name}'
 ## Success
-sent-message-to-player: '&aMessage sent successfully to %online-player%'
+sent-message-to-player: '&aMessage sent successfully to {online-player}'
 sent-message-to-all: '&aMessage sent successfully to all online players'
-## Errors
-message-not-found: '&4Could not find a message with name: %message-name%'
 
-# Sound
-sound-command: sound
-sound-permission: keepgate.sound
-## Parameters
-sound-name-parameter: sound-name
-## Play sound
-play-sound-command: play
-play-sound-permission: keepgate.sound.play
-play-sound-description: 'Plays a sound at the specified location'
-## Play sound to
-play-sound-to-command: play-to
-play-sound-to-permission: keepgate.sound.play-to
-play-sound-to-description: "Plays a sound at the target player's location"
-## Success
-played-sound: '&aPlayed sound successfully at %world-name%, %x%, %y%, %z%'
-played-sound-at-player: '&aPlayed sound at %online-player%''s location'
+# -----------------------
+#    Particle Commands
+# -----------------------
+## Placeholders: {particle-name}, {world-name}, {x}, {y}, {z}
+## Descriptions
+particle-command: ''
+particle-spawn-command: 'Spawn a particle at the specified location'
+particle-spawn-to-command: 'Spawn a particle on the target player'
+particle-show-me-command: 'Spawn a particle 2 blocks in front of you'
 ## Errors
-sound-not-found: '&4Could not find a sound with name: %sound-name%'
-
-# Particle
-particle-command: particle
-particle-permission: keepgate.particle
-## Parameters
-particle-name-parameter: particle-name
-## Spawn particle
-spawn-particle-command: spawn
-spawn-particle-permission: keepgate.particle.spawn
-spawn-particle-description: 'Spawn a particle at the specified location'
-## Spawn particle to player
-spawn-particle-to-command: spawn-to
-spawn-particle-to-permission: keepgate.particle.spawn-to
-spawn-particle-to-description: 'Spawns a particle on the target player'
-## Show me particle
-show-me-particle-command: show-me
-show-me-particle-permission: keepgate.particle.show-me
-show-me-particle-description: 'Spawns a particle 2 blocks in front of you'
-## Errors
-particle-not-found: '&4Could not find a particle with name: %particle-name%'
+particle-not-found: '&4Could not find a particle with name: {particle-name}'
 ## Success
-spawned-particle: '&aSpawned a particle effect in %world-name% at x: %x%, y: %y%, z: %z%'
-spawned-particle-at-player: '&aSpawned a particle at %online-player%''s location'
+spawned-particle: '&aSpawned a particle effect at {world-name}, {x}, {y}, {z}'
+spawned-particle-at-player: '&aSpawned a particle at {online-player}''s location'
 showed-me-particle: '&aParticle spawned two blocks in front of you'
 
-# Structure Command
-structure-command: structure
-structure-permission: keepgate.structure
-## Parameters
-structure-name-parameter: structure-name
-## Save Structure
-save-structure-command: save
-save-structure-permission: keepgate.structure.save
-save-structure-description: 'Saves the selected region to a structure file'
-## Place Structure
-place-structure-command: place
-place-structure-permission: keepgate.structure.place
-place-structure-description: 'Places the structure at the target block'
+# --------------------
+#    Sound Commands
+# --------------------
+## Placeholders: {sound-name}, {world-name}, {x}, {y}, {z}
+## Descriptions
+sound-command: ''
+sound-play-command: 'Play a sound at the given location'
+sound-play-to-command: "Play a sound at the given player's location"
+## Errors
+sound-not-found: '&4Could not find a sound with name: {sound-name}'
 ## Success
-saved-structure: '&aSaving structure to file: %file-path%'
+played-sound: '&aPlayed a sound effect at {world-name}, {x}, {y}, {z}'
+played-sound-at-player: "&aPlayed a sound at {online-player}'s location"
+
+# ------------------------
+#    Structure Commands
+# ------------------------
+## Placeholders: {structure-name}, {file-path}
+## Descriptions
+structure-command: ''
+structure-save-command: 'Saves the selected structure to a yaml file'
+structure-place-command: 'Place a structure at the target block'
+## Success
+saved-structure: '&aSaving structure to file: {file-path}'
 placed-structure: '&aPlaced structure at target block'
 ## Errors
-structure-not-found: '&4Could not find structure with name: %structure-name%'
+structure-not-found: '&4Could not find structure with name: {structure-name}'
 structure-minimum-blocks: '&4Structure must have at least two blocks in it'
+# -----------------------
 
-# Gate Command
-gate-command: gate
-gate-permission: keepgate.gate
-## Parameters
-gate-name-parameter: gate-name
-## Get Generator
-get-gate-command: get
-get-gate-permission: keepgate.gate.get
-get-gate-description: 'Get an item used to place/break gates'
-## Set Generator
-set-gate-command: set
-set-gate-permission: keepgate.gate.set
-set-gate-description: 'Set the gate to the block you''re looking at'
-## Remove Generator
-remove-gate-command: remove
-remove-gate-permission: keepgate.gate.remove
-remove-gate-description: 'Remove the gate at the block you''re looking at'
-## Get All Generators
-get-all-gates-command: get-all
-get-all-gates-permission: keepgate.gate.get-all
-get-all-gates-description: 'Adds all gate items to your inventory'
-## Set All Generators
-set-all-gates-command: set-all
-set-all-gates-permission: keepgate.gate.set-all
-set-all-gates-description: 'Sets all gates in the selected region'
-## Remove All Generators
-remove-all-gates-command: remove-all
-remove-all-gates-permission: keepgate.gate.remove-all
-remove-all-gates-description: 'Removes all gates in a the selected region'
+# -----------------------
+#    Gate Command
+# -----------------------
+## Descriptions
+gate-command: ''
+gate-get-command: 'Get the gate with the given name'
+gate-get-group-command: 'Receive all gates of a group'
+gate-get-all-command: 'Receive all gates'
+gate-set-command: 'Set the gate to the block you''re looking at'
+gate-remove-command: 'Remove the gate at the block you''re looking at'
+gate-set-all-command: 'Set all gates in the selected region'
+gate-remove-all-command: 'Remove all gates in the selected region'
+gate-harvest-all-command: 'Harvest all gates with the tool in main hand'
 ## Errors
-gate-not-found: '&4Could not find gate with given name'
+gate-not-found: '&4Could not find gate with name: {gate-name}'
+gate-group-not-found: '&4Could not find gate group with name: {gate-group}'
 incomplete-region: '&4You need to select a region with the gate wand'
 too-far-away: '&4Cannot find a block in range, move closer'
 target-not-gate: '&4The block you''re looking at is not a gate'
 gate-overlap: '&4Too close to another gate'
 ## Success
-received-gate: '&aYou received x1 %gate% gate'
+received-gate: '&aYou received x1 {gate} gate'
 received-wand: '&aYou received x1 wand item'
-created-gate: '&aGenerator created successfully at target block'
-removed gate: '&aGenerator removed successfully at target block'
+created-gate: '&aGate created successfully at target block'
+removed gate: '&aGate removed successfully at target block'
+received-gate-group: '&aYou received {gate-group} gates'
 received-all-gates: '&aYou received x1 of each gate item'
 created-all-gates: '&aAll gates inside of region have been set successfully'
 removed-all-gates: '&aAll gates inside of region have been removed successfully'
-harvested-all-gates: '&aAll %gate% gates have been harvested with held tool'
+harvested-all-gates: '&aAll {gate} gates have been harvested with held tool'
 
-# Gate Item
-gate-place-permission: keepgate.gate.place
-gate-break-permission: keepgate.gate.break
-gate-rotate-permission: keepgate.gate.rotate
-placed-gate: '&aPlaced gate successfully'
-broke-gate: '&cBroke gate successfully'
-changed-gate-rotation: '&aRotated gate by 90 degrees'
-missing-place-permission: '&4You don''t have the permission to place gates'
-missing-break-permission: '&4You don''t have the permission to break gates'
-missing-rotate-permission: '&4You don''t have the permission to rotate gates'
-
-# Wand Command
-wand-command: wand
-wand-permission: keepgate.gate.wand
-wand-description: 'Get a wand used to mark regions'
-
-# Wand Item
+# --------------------
+#    Selection Wand
+# --------------------
+## Command
+wand-command: 'Get a wand used to select a region'
+## Item
 selected-first-position: '&aFirst position selected'
 selected-second-position: '&aSecond position selected'
 missing-wand-permission: '&4You don''t have the permission to use the wand'
 
-
-
-
-
-
+# --------------------
+#    Gate Item
+# --------------------
+## Errors
+cannot-place-gate: '&4You don''t have the permission to place gates'
+cannot-break-gate: '&4You don''t have the permission to break gates'
+cannot-rotate-gate: '&4You don''t have the permission to rotate gates'
+## Success
+placed-gate: '&aPlaced gate successfully'
+broke-gate: '&cBroke gate successfully'
+changed-gate-rotation: '&aRotated gate by 90 degrees'

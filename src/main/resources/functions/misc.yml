@@ -1,0 +1,6 @@
+requireSimpleKey:
+  if-not: playerHasItem simple_key
+  do:
+    - chatMessage <&4You need a simple key to open this gate!>
+    - cancelEvent
+    - stop

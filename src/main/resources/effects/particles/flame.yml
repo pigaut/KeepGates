@@ -1,0 +1,68 @@
+flame_ring:
+  - { particle: flame, count: 1, offset: {x: 1.0, y: -0.40, z: 0} }
+  - { particle: flame, count: 1, offset: {x: 0.923, y: -0.40, z: 0.383} }
+  - { particle: flame, count: 1, offset: {x: 0.707, y: -0.40, z: 0.707} }
+  - { particle: flame, count: 1, offset: {x: 0.383, y: -0.40, z: 0.923} }
+  - { particle: flame, count: 1, offset: {x: 0.0, y: -0.40, z: 1.0} }
+  - { particle: flame, count: 1, offset: {x: -0.383, y: -0.40, z: 0.923} }
+  - { particle: flame, count: 1, offset: {x: -0.707, y: -0.40, z: 0.707} }
+  - { particle: flame, count: 1, offset: {x: -0.923, y: -0.40, z: 0.383} }
+  - { particle: flame, count: 1, offset: {x: -1.0, y: -0.40, z: 0} }
+  - { particle: flame, count: 1, offset: {x: -0.923, y: -0.40, z: -0.383} }
+  - { particle: flame, count: 1, offset: {x: -0.707, y: -0.40, z: -0.707} }
+  - { particle: flame, count: 1, offset: {x: -0.383, y: -0.40, z: -0.923} }
+  - { particle: flame, count: 1, offset: {x: 0.0, y: -0.40, z: -1.0} }
+  - { particle: flame, count: 1, offset: {x: 0.383, y: -0.40, z: -0.923} }
+  - { particle: flame, count: 1, offset: {x: 0.707, y: -0.40, z: -0.707} }
+  - { particle: flame, count: 1, offset: {x: 0.923, y: -0.40, z: -0.383} }
+
+soul_flame_ring:
+  - { particle: soul_fire_flame, count: 1, offset: {x: 1.0, y: -0.3, z: 0.0} }
+  - { particle: soul_fire_flame, count: 1, offset: {x: 0.707, y: -0.3, z: 0.707} }
+  - { particle: soul_fire_flame, count: 1, offset: {x: 0.0, y: -0.3, z: 1.0} }
+  - { particle: soul_fire_flame, count: 1, offset: {x: -0.707, y: -0.3, z: 0.707} }
+  - { particle: soul_fire_flame, count: 1, offset: {x: -1.0, y: -0.3, z: 0.0} }
+  - { particle: soul_fire_flame, count: 1, offset: {x: -0.707, y: -0.3, z: -0.707} }
+  - { particle: soul_fire_flame, count: 1, offset: {x: 0.0, y: -0.3, z: -1.0} }
+  - { particle: soul_fire_flame, count: 1, offset: {x: 0.707, y: -0.3, z: -0.707} }
+
+flame_spiral:
+  - { particle: flame, count: 1, offset: {x: 1.0, y: -0.4, z: 0} }
+  - { particle: flame, count: 1, offset: {x: 0.923, y: -0.3, z: 0.383}, delay: 4 }
+  - { particle: flame, count: 1, offset: {x: 0.707, y: -0.2, z: 0.707}, delay: 8 }
+  - { particle: flame, count: 1, offset: {x: 0.383, y: -0.1, z: 0.923}, delay: 12 }
+  - { particle: flame, count: 1, offset: {x: 0.0, y: 0.0, z: 1.0}, delay: 16 }
+  - { particle: flame, count: 1, offset: {x: -0.383, y: 0.1, z: 0.923}, delay: 20 }
+  - { particle: flame, count: 1, offset: {x: -0.707, y: 0.2, z: 0.707}, delay: 24 }
+  - { particle: flame, count: 1, offset: {x: -0.923, y: 0.3, z: 0.383}, delay: 28 }
+  - { particle: flame, count: 1, offset: {x: -1.0, y: 0.4, z: 0}, delay: 32 }
+  - { particle: flame, count: 1, offset: {x: -0.923, y: 0.5, z: -0.383}, delay: 36 }
+  - { particle: flame, count: 1, offset: {x: -0.707, y: 0.6, z: -0.707}, delay: 40 }
+  - { particle: flame, count: 1, offset: {x: -0.383, y: 0.7, z: -0.923}, delay: 44 }
+  - { particle: flame, count: 1, offset: {x: 0.0, y: 0.8, z: -1.0}, delay: 48 }
+  - { particle: flame, count: 1, offset: {x: 0.383, y: 0.9, z: -0.923}, delay: 52 }
+  - { particle: flame, count: 1, offset: {x: 0.707, y: 1.0, z: -0.707}, delay: 56 }
+  - { particle: flame, count: 1, offset: {x: 0.923, y: 1.1, z: -0.383}, delay: 60 }
+
+another_flame_spiral:
+  - { particle: flame, count: 1, offset: {x: -1.0, y: -0.4, z: 0.0} }
+  - { particle: flame, count: 1, offset: {x: -0.923, y: -0.3, z: -0.383}, delay: 4 }
+  - { particle: flame, count: 1, offset: {x: -0.707, y: -0.2, z: -0.707}, delay: 8 }
+  - { particle: flame, count: 1, offset: {x: -0.383, y: -0.1, z: -0.923}, delay: 12 }
+  - { particle: flame, count: 1, offset: {x: 0.0, y: 0.0, z: -1.0}, delay: 16 }
+  - { particle: flame, count: 1, offset: {x: 0.383, y: 0.1, z: -0.923}, delay: 20 }
+  - { particle: flame, count: 1, offset: {x: 0.707, y: 0.2, z: -0.707}, delay: 24 }
+  - { particle: flame, count: 1, offset: {x: 0.923, y: 0.3, z: -0.383}, delay: 28 }
+  - { particle: flame, count: 1, offset: {x: 1.0, y: 0.4, z: 0}, delay: 32 }
+  - { particle: flame, count: 1, offset: {x: 0.923, y: 0.5, z: 0.383}, delay: 36 }
+  - { particle: flame, count: 1, offset: {x: 0.707, y: 0.6, z: 0.707}, delay: 40 }
+  - { particle: flame, count: 1, offset: {x: 0.383, y: 0.7, z: 0.923}, delay: 44 }
+  - { particle: flame, count: 1, offset: {x: 0.0, y: 0.8, z: 1.0}, delay: 48 }
+  - { particle: flame, count: 1, offset: {x: -0.383, y: 0.9, z: 0.923}, delay: 52 }
+  - { particle: flame, count: 1, offset: {x: -0.707, y: 1.0, z: 0.707}, delay: 56 }
+  - { particle: flame, count: 1, offset: {x: -0.923, y: 1.1, z: 0.383}, delay: 60 }
+
+# You can use particles that have already been defined before
+double_flame_spiral:
+  - flame_spiral
+  - another_flame_spiral

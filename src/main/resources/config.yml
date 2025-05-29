@@ -16,17 +16,16 @@ structure-save-blacklist:
   - AIR
   - BEDROCK
 
-# Tools are only intended for admin use
-generator-tool:
-  material: paper   # Replaced by the last stage block
-  name: '&b&l%gate_tc% Gate (%gate_rotation_tc%)'
+gate-tool:
+  material: paper   # Replaced by the first open gate block
+  name: '&b&l{gate_tc} Gate ({gate_rotation_tc})'
   glow: true
   lore:
     - '&fright-click to place'
     - '&fleft-click to break'
     - '&fshift + left-click (air) to rotate'
 
-wand-tool:
+structure-wand:
   material: golden shovel
   name: '&6&lGate Wand'
   glow: true

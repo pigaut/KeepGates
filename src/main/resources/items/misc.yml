@@ -1,0 +1,10 @@
+simple_key:
+  type: tripwire hook
+  name: '&7&lSimple Gate Key'
+  lore: ['&d- Used to open a simple gate -']
+
+stone:
+  type: stone
+
+diamond:
+  type: diamond
